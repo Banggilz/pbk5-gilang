@@ -6,9 +6,6 @@ import image4 from '/public/images4.png'
 import image5 from '/public/images5.png'
 
  
-// const images = [image1, image2, image3, image4, image5]
-
- 
  const data = [
   { id: 1, image: image1, title: 'Pulse Aio Pro', price: 800000, description: 'Varian terbaru dari pulse aio dengan konsep yang colorfull', type: 'AIO'},
   { id: 2, image: image2, title: "Paradewa Sthorberry", price: 100000, description: 'Liquid terbaru dari paradewa dengan', type: 'LIQUID'},
