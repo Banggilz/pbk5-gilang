@@ -10,7 +10,7 @@ import image5 from '/public/images5.png'
   { id: 1, image: image1, title: 'Pulse Aio Pro', price: 800000, description: 'Varian terbaru dari pulse aio dengan konsep yang colorfull', type: 'AIO'},
   { id: 2, image: image2, title: "Paradewa Sthorberry", price: 100000, description: 'Liquid terbaru dari paradewa dengan', type: 'LIQUID'},
   { id: 3, image: image3, title: 'Oxva Xlim Pro', price: 200000, description: 'POD kekinian yang disukai banyak anak muda', type: 'POD' },
-  { id: 4, image: image4, title: 'Drop Rda', price: 400000, description: 'Rda terbaru dari drop yang menawarkan flavour dan th yang nikmat', type: 'RDA'},
+  { id: 4, image: image4, title: 'Reload S Rda', price: 400000, description: 'Rda terbaru dari drop yang menawarkan flavour dan th yang nikmat', type: 'RDA'},
   { id: 5, image: image5, title: 'Tita Rta', price: 600000, description: 'New tita RTA dengan model terbaru', type: 'RTA'},
 ]
 
