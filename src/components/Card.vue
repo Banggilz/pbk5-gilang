@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import image1 from '/public/images1.png'
 import image2 from '/public/images2.png'
 import image3 from '/public/images3.png'
@@ -6,13 +7,17 @@ import image4 from '/public/images4.png'
 import image5 from '/public/images5.png'
 
  
- const data = [
+ const data = ref([
   { id: 1, image: image1, title: 'Pulse Aio Pro', price: 800000, description: 'Varian terbaru dari pulse aio dengan konsep yang colorfull', type: 'AIO'},
   { id: 2, image: image2, title: "Paradewa Sthorberry", price: 100000, description: 'Liquid terbaru dari paradewa dengan', type: 'LIQUID'},
   { id: 3, image: image3, title: 'Oxva Xlim Pro', price: 200000, description: 'POD kekinian yang disukai banyak anak muda', type: 'POD' },
   { id: 4, image: image4, title: 'Reload S Rda', price: 400000, description: 'Rda terbaru dari drop yang menawarkan flavour dan th yang nikmat', type: 'RDA'},
   { id: 5, image: image5, title: 'Tita Rta', price: 600000, description: 'New tita RTA dengan model terbaru', type: 'RTA'},
-]
+])
+
+const deleteItem = (id) => {
+    data.value = data.value.filter((item) => item.id !== id)
+}
 
 </script>
 
@@ -50,7 +55,9 @@ import image5 from '/public/images5.png'
         </div>
         <div class="flex items-center justify-between">
             <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">Rp. {{ item.price }}</span>
-            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+            <button @click="deleteItem(item.id)"  class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                Delete
+            </button>
         </div>
     </div>
 </div>
